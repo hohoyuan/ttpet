@@ -19,6 +19,14 @@ public class InitController  {
 		modules.add("专题");
 		modules.add("杂志");
 		modules.add("知道");
+		
+		/*
+		 * 这是刚刚加的
+		 * add by lim
+		 */
+		modules.add("知道");
+		modules.add("知道");
+		modules.add("知道");
 		// TODO Auto-generated method stub
 		return new ModelAndView("/welcome","modules",modules);
 	}
