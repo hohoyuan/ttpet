@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+a{
+	font-family: 微软雅黑;
+	text-decoration: none;
+	color: gray;
+}
+ul li{
+	list-style: none;
+	font-family: 微软雅黑;
+}
+
