@@ -19,6 +19,7 @@ public class InitController  {
 		modules.add("专题");
 		modules.add("杂志");
 		modules.add("知道");
+		// TODO Auto-generated method stub   佛挡杀佛
 		
 		/*
 		 * 这是刚刚加的
