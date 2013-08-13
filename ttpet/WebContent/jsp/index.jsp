@@ -11,7 +11,7 @@
 	width: 100%;
 	height: 60px;
 	margin-top: 10px;
-	font-family:Î¢ÈíÑÅºÚ;
+	font-family:Î¢ÈíÑÅºÚ; 
 	font-size:small;
 	border: 1px solid #ccc;
 }
