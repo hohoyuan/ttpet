@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ttpet"
+  id="myeclipse.1376448648060"
+  context-root="/ttpet"
+  j2ee-spec="5.0"
+  archive="ttpet.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

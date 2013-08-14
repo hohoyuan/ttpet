@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop.xsd 
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/context    
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+ 	<context:component-scan base-package="com.pb"/>   
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:../dbConnection.properties</value>
+		</property> 
+	</bean>
+	
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://${connection.ip}:${connection.port}/${connection.dbname}${connection.useUnicode}</value>
+		</property>
+		<property name="username">
+			<value>${connection.username}</value>
+		</property>
+		<property name="password">
+			<value>${connection.password}</value>
+		</property>
+		<!--
+			连接池配置 1.最大连接数（默认最大为100） 2.可空闲的连接数（30） 3.最大可以等待的连接(500)
+		-->
+		<property name="maxActive" value="100"></property>
+		<property name="maxIdle" value="30"></property>
+		<property name="maxWait" value="500"></property>
+	</bean>
+		<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		 <property name="dataSource" ref="dataSource" />
+		</bean>
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />   
+	
+</beans>
