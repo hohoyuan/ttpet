@@ -128,16 +128,14 @@
 		</div>
 		<div id="login">
 		<ul>
-			<li><a href="#">µÇÂ¼</a></li>
-			<li><a href="./register.html">×¢²á</a></li>
+			<li><a href="jsp/login.jsp">µÇÂ¼</a></li>
+			<li><a href="jsp/register.jsp">×¢²á</a></li>
 			<li>ÆäËûÕËºÅµÇÂ¼£º</li>
 			<li><img alt="ÌÚÑ¶Î¢²©" src="./images/tecent.png"></li>
 			<li><img alt="ÐÂÀËÎ¢²©" src="./images/sina.png"></li>
 		</ul>
 		</div>
 	</div>
-	<div id="main">
-		<jsp:include page="index.jsp"></jsp:include>
-	</div>
+	
 </body>
 </html>

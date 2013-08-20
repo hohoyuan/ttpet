@@ -42,7 +42,7 @@
 		
 		<div class="db_nav_rh" id="daohang_rh">
 			<ul>
-				<li><a href="http://passport.ttpet.com/login" login="mini">&nbsp;µÇÂ¼&nbsp;</a></li><li>&nbsp; |&nbsp;</li> <li><a href="http://passport.ttpet.com/account" target="_blank">&nbsp;×¢²á&nbsp;</a></li>
+				<li><a href="login.jsp" login="mini">&nbsp;µÇÂ¼&nbsp;</a></li><li>&nbsp; |&nbsp;</li> <li><a href="register.jsp" target="_blank">&nbsp;×¢²á&nbsp;</a></li>
 			</ul>
 		</div>
 		<div class="clear-both"></div>
