@@ -200,8 +200,8 @@ window.location.href="http://passport.ttpet.com/account/verify";
 			<a href="login.jsp" class="wlg_btn2" title="注册">登录</a>
 			<div class="wlg_line"></div>
 			<p class="fonthui">您也可以直接用以下帐号登录</p>
-			<p class="sina_lg"><a href="weibo.png" title="新浪微博"></a></p>
-			<p class="qq_lg"><a href="qzone.png" title="腾讯微博"></a></p>
+			<p class="sina_lg"><a href="./img/weibo.png" title="新浪微博"></a></p>
+			<p class="qq_lg"><a href="./img/qzone.png" title="腾讯微博"></a></p>
 		</div>
 		<div class="clear-both"></div>
 		</div>

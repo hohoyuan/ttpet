@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<link rel="shortcut icon" href="top.png" type="image/x-icon" />
 <link rel="stylesheet" href="./css/all.css" type="text/css"/>
 <title>天天宠物网</title>
 </head>

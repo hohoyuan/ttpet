@@ -5,6 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+
+<link rel="shortcut icon" href="top.png" type="image/x-icon" />
+
 <link rel="stylesheet" href="./css/all.css" type="text/css"/>
 <title>天天宠物网</title>
 
@@ -13,36 +16,43 @@
 	width: 100%;
 	height: 90px;
 	margin: 0px;
+	background-color:#f6f6f6
+	
 }
 #head_content{
-	width: 1020px;
-	height: 100%;
+	width: 80%;
+	height: 90px;
 	margin: 0px 140px 0px 140px;
+	
 }
-#logo {
+#head_logo {
 	width: 260px;
-	height: 80px;
+	height: 90px;
 	float: left;
+	
+	
 }
-#logo img{
+#head_logo img{
 	padding-left: 30px;
 }
 
-#search {
+#head_search {
 	width: 340px;
-	height: 80px;
-	margin-left:50px;
+	height: 90px;
+	margin-left:150px;
 	float: left;
+	
 }
 
-#link {
-	width: 325px;
-	height: 80px;
-	margin-left:30px;
-	float: left;
+#head_link {
+	width: 350px;
+	height: 90px;
+	margin-top:1px;
+	margin-right:10px;
+	float: right;
 }
 
-#link ul li{
+#head_link ul li{
 	padding-top:13px;
 	padding-left:15px;
 	list-style: none;
@@ -58,25 +68,31 @@
 	margin-left: 0px;
 	background-color: orange;
 }
-
-#menu{
-	margin-left: 180px;
-}
-
-#menu a{
-	font-size: 20px;
-}
-
-#menu ul li{
+#menu {width: 50%;
+	height: 80px;
+	margin-top:1px;
+	margin-left:60px;
 	float: left;
+	
+	}
+#menu_content {width: 100%;
+	height: 80px;
+	margin-top:1px;
+	background-color: orange;
+	
+	}
+#menu ul { list-style: none; margin: 0px; padding: 0px; }
+#menu ul li {padding-top:13px;
+	padding-left:15px;
 	list-style: none;
-	margin-top: 15px;
-	margin-left:20px;
-	font-size:20px;
-}
+	float: left;
+	font-family: 微软雅黑;
+	font-size: small; }
+
 
 #login{
 	margin-left: 800px;
+
 }
 
 #login ul li{
@@ -94,18 +110,21 @@
 	margin-top: 10px;
 	margin-left: 180px;
 }
+bady{
+	background-color:#f6f6f6;
+}
 </style>
 </head>
 <body>
 	<div id="head">
 		<div id="head_content">
-			<div id="logo">
-				<a href=""><img alt="logo" src="./images/logo.gif" style="border: none"/> </a>
+			<div id="head_logo">
+				<a href=""><img alt="logo" src="./img/logo.png" style="border: none"/> </a>
 			</div>
-			<div id="search">
+			<div id="head_search">
 				<jsp:include page="seacher.jsp"></jsp:include>
 			</div>
-			<div id="link">
+			<div id="head_link">
 				<ul>
 					<li>网站地图</li>
 					<li>设为首页</li>
@@ -115,17 +134,32 @@
 			</div>
 		</div>
 	</div>
-	<div id="menubar">
-		<div id="menu">
+	<div id="menu_content">
+		 <!-- 菜单开始  -->  
+		<div  id="menu">
 			<ul>
-				<c:forEach var="list" items="${modules}">
-					<li><a href="" title="${list }">${list}</a>
-					</li>
-					<li>|</li>
-				</c:forEach>
+				<li><a href="http://www.ttpet.com/" title="天天宠物网首页" class="font16 fontbold">首页</a></li>
+				<li>|</li>
+				<li><a href="http://www.ttpet.com/zixun/" title="资讯">资讯</a></li>
+				<li>|</li>
+				<li><a href=" http://www.ttpet.com/special/index.html" title="专题">专题</a></li>
+				<li>|</li>
+				<li><a href="http://www.ttpet.com/zazhi/E-zine/index.html" title="杂志">杂志</a></li>
+				<li>|</li>
+				<li WLP="top_nav">
+					<a href="http://wowo.ttpet.com/ " class="nav_border font16 fontbold" title="窝窝">窝窝<em></em></a>
+					<div class="db_two">
+						<a href="http://blog.ttpet.com/" title="日志">日志</a>
+						<a href="http://photo.ttpet.com/" title="相册">相册</a>
+						<a href="http://video.ttpet.com/" title="视频">视频</a>
+						<a href="http://you.ttpet.com/" title="找宠友" style="border:none;">找宠友</a>
+                  </div>
+				</li>
+				
 			</ul>
-
 		</div>
+		
+<!-- 菜单结束 -->  
 		<div id="login">
 		<ul>
 			<li><a href="jsp/login.jsp">登录</a></li>
