@@ -1,11 +1,74 @@
 @CHARSET "UTF-8";
-a{
-	font-family: 微软雅黑;
-	text-decoration: none;
-	color: gray;
-}
-ul li{
-	list-style: none;
-	font-family: 微软雅黑;
-}
+.wlg_con{ width:960px; margin:0px auto; padding:40px 0px;}
+.wlg_main{ background:#ff0000; border:1px solid #e1e1e1; display:block; clear:both; padding:30px 30px 20px 50px; overflow:hidden;}
+.bd_rh{ border-right:1px #e5e5e5 solid;}
+.wlg_tab{ width:620px; float:left; padding-top:20px; margin-bottom:50px;}
+.wlg_tab th,.czmm th{ width:100px }
+.wlg_tab th,.wlg_tab td{ height:60px;vertical-align:top;}
+.wlg_tab th{ line-height:32px;}
+.wlg_tab .set_input{ width:260px; float:left; margin-right:10px; vertical-align:middle; height:34px;}
+.wlg_tab .set_inputa{width:260px;}
+.font26{ font-size:26px; line-height:36px!important; color:#656565; font-weight:500;}
+.wlg_con .font26{ padding-bottom:20px;}
+.wlg_btn,.wlg_btn3{ height:36px; line-height:36px; padding:0px 10px; background:#6db227; border:1px #62a123 solid; color:#fff; font-size:14px; display:inline-block; cursor:pointer; _width:160px; _border:0px;}
+.wlg_btn:hover,.wlg_btn{ color:#fff !important;}
+.wlg_btn:hover,wlg_btn3:hover{ text-decoration:none;}
+.wlg_tab table span{ height:60px;}
+.wlg_text{ width:220px; float:left; color:#999999; display:none; font-size:12px;}
+.wlg_rh{ float:left; padding-left:20px; padding-top:40px;}
+.wlg_rh p{ line-height:30px;}
+.wlg_rhc{ float:left; padding-left:30px; padding-top:20px; *padding-left:20px;}
+.wlg_rhc p{ line-height:30px;}
+.wlg_line{ border-top:1px dashed #c1c1c1; width:210px; margin:20px 0 15px; display:block; clear:both; font-size:1px;}
+.wlg_btn2{ background-position: -52px -85px; width:92px; height:38px; line-height:38px; display:inline-block; color:#a5740c; font-weight:700; font-size:14px; cursor:pointer; text-align:center;}
+.wlg_btn2:hover{ text-decoration:none;}
+.sina_lg,.qq_lg{ background:url(../images/setting/wlg_ico.gif?2) no-repeat; height:40px;width:140px; display:block; margin-bottom:10px; line-height:40px;}
+.sina_lg a,.qq_lg a{ display:block; height: 100%;width: 100%;}
+.sina_lg{background-position:0px 2px;}
+.qq_lg{ background-position:0px -42px;}
+/*验证邮件*/
+.em_lf{ width:500px; height:400px; float:left; position:relative;}
+.em_text{ padding-left:20px; padding-top:50px; font-size:14px;}
+.em_text dt{ background-position: -164px -86px; display:inline-block; width:80px; height:80px; float:left; }
+.em_text dd{ padding-left:100px; line-height:30px;}
+.wlg_btn3{background:#ebebeb; border:1px #cccccc solid; color:#818181; margin-left:20px;}
+.em_rh{ font-size:14px; line-height:40px; }
+.em_rh h5{font-size:14px; font-weight:normal;}
+.em_rh p{ color:#999999; background-position:-560px -254px; padding-left:10px;text-align:left;}
+.em_rh .ljbd{ padding:0px 5px;}
+.em_rh .set_input{ width:110px; margin-left:5px; height:28px; line-height:28px; float:none; margin-right:0px; *width:98px;}
+.em_tip{ background:url(../images/setting/tip_img.gif) no-repeat;position:absolute; left:150px; top:220px; display:block; width:258px; height:71px;}
+/*重置密码*/
+.czmm{float: left;padding-top: 20px;width:500px; height:260px;}
+.czmm th{ width:100px; text-align:right; line-height:30px;}
+.czmm th, .czmm td {height:auto; vertical-align: top; padding-bottom:5px; font-size:14px;}
+.czmm .wlg_text,.czmm .set_cuo2{ width:280px; height:50px; line-height:18px; padding-top:4px;}
+.czmm .set_cuo2{ padding-left:0px; background:none; color:#dd3c10;}
+.czmm .set_input{ float:none;}
+/**/
+.wdl{ padding-top:30px; }
+.wdl .wlg_btn{ width:120px; text-align:center;}
+.wdl th,.wdl td{ font-size:14px; height:auto; padding-bottom:20px; }
+.wdl th{line-height:34px;}
+.wdl label{float:left;}
+/*设置新密码*/
+.seg_nwwd{ padding:40px 0px;}
+/*填写个人资料*/
+.txzl{ padding:20px 0px; display:block; overflow:hidden; clear:both;}
+.txzl .w_main_r{ width:640px; min-height:500px; _height:550px;}
+.txzl .set_c2{ border-bottom:0px;padding-bottom:10px;}
+.txzl .set_c2 h3{ font-size:18px; font-weight:normal; float:left; }
+.set_input4,.txzl .set_c4 th{ width:110px;}
+.set_input4{ float:none;}
+.txzl .set_c4 th{}
+.bd_l{border-left: 1px solid #E5E5E5;}
+.txzl .set_c2{ padding-left:20px;}
+.txzl .wlg_btn, .txzl .wlg_btn3{ _width:80px; text-align:center;}
+.txzl .em_lf{ width:235px;}
+.txzl .set_input{ width:250px;}
+.txzl .em_text{ padding-left:0px;}
+.txzl .em_text dt{ width:40px;}
+.txzl .font26{ font-size:24px;}
+.txzl .em_text dd{ padding-left:40px;}
+.txzl .em_text dt{ background-position:-525px -158px; height:40px;}
 
