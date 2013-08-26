@@ -3,6 +3,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<!--整个系统的头部-搜索加导航  -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gbk">
 
@@ -13,7 +14,7 @@
 
 <style type="text/css">
 #head {
-	width: 100%;
+	width: 1500px;
 	height: 90px;
 	margin: 0px;
 	background-color:#f6f6f6
@@ -75,7 +76,7 @@
 	float: left;
 	
 	}
-#menu_content {width: 100%;
+#menu_content {width: 1500px;
 	height: 80px;
 	margin-top:1px;
 	background-color: orange;
@@ -116,6 +117,7 @@ bady{
 </style>
 </head>
 <body>
+	<!--搜索部分  -->
 	<div id="head">
 		<div id="head_content">
 			<div id="head_logo">
@@ -135,7 +137,7 @@ bady{
 		</div>
 	</div>
 	<div id="menu_content">
-		 <!-- 菜单开始  -->  
+		 <!--导航菜单部分  -->
 		<div  id="menu">
 			<ul>
 				<li><a href="http://www.ttpet.com/" title="天天宠物网首页" class="font16 fontbold">首页</a></li>
@@ -162,8 +164,8 @@ bady{
 <!-- 菜单结束 -->  
 		<div id="login">
 		<ul>
-			<li><a href="jsp/login.jsp">登录</a></li>
-			<li><a href="jsp/register.jsp">注册</a></li>
+			<li><a href="jsp/public/login.jsp">登录</a></li>
+			<li><a href="jsp/public/register.jsp">注册</a></li>
 			<li>其他账号登录：</li>
 			<li><img alt="腾讯微博" src="./images/tecent.png"></li>
 			<li><img alt="新浪微博" src="./images/sina.png"></li>

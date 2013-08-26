@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<!-- 注册页面 -->
 <meta http-equiv="Content-Type" content="text/html; charset=gbk">
 <link href="http://localhost:2020/ttpet/css/all.css" type="text/css">
 <title>宠物交友-天天宠物网</title>
@@ -158,7 +159,7 @@ window.location.href="http://passport.ttpet.com/account/verify";
 </head>
 <body>
 	<div>
-		<jsp:include page="head2.jsp"></jsp:include>
+		<jsp:include page="personHead.jsp"></jsp:include>
 	</div>
 	<div class="wlg_con">
 		<div class="wlg_main">
@@ -207,7 +208,7 @@ window.location.href="http://passport.ttpet.com/account/verify";
 		</div>
 	</div>
 	<div>
-		<jsp:include page="bottom.jsp"></jsp:include>
+		<jsp:include page="bottomLinked.jsp"></jsp:include>
 	</div>
 </body>
 </html>

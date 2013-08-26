@@ -3,13 +3,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<!--底部链接 备案号-->
 <meta http-equiv="Content-Type" content="text/html; charset=gbk">
 <link href="./css/all.css" type="text/css">
 <title>Insert title here</title>
 <style type="text/css">
 .foot{
 	width:400px;
-	font-family: 寰蒋闆呴粦;
+	font-family: 微软雅黑;
 	font-size: 12px;
 	text-align:left;
 	margin-top:10px;
