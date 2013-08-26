@@ -17,10 +17,10 @@
 	<div class="db_nav_box">
 		<div class="db_nav_lf" id="daohang">
 			<ul>
-				<li class="nav_pad2"><a href="http://www.ttpet.com/" title="天天宠物网首页" style="margin-right:5px; padding-top:10px; display:inline-block;"><img src="http://img.ttpet.com/logo/slogo.png" width="90" height="19" alt="天天宠物网" /></a></li>
+				<li class="nav_pad2"><a href="../../index.jsp" title="天天宠物网首页" style="margin-right:5px; padding-top:10px; display:inline-block;"><img src="http://img.ttpet.com/logo/slogo.png" width="90" height="19" alt="天天宠物网" /></a></li>
 				<li><img src="http://img.ttpet.com/logo/beta.gif"></li>
 				
-				<li><a href="http://www.ttpet.com/" target="_blank" title="天天宠物网首页" class="font14">首页</a></li>
+				<li><a href="../../index.jsp" target="_blank" title="天天宠物网首页" class="font14">首页</a></li>
 				<li>|</li>
 				
 				<li><a href="http://www.ttpet.com/zixun/" target="_blank" title="资讯">资讯</a></li>
