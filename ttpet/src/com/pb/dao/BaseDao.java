@@ -1,6 +1,7 @@
 package com.pb.dao;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.Date;
@@ -13,18 +14,34 @@ import java.sql.Types;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.dbcp.BasicDataSource;
+import org.apache.log4j.Logger;
+import org.jdom.Element;
+import org.jdom.JDOMException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.pb.util.XmlHandler;
 
 @Service
 public class BaseDao {
 	@Autowired
 	BasicDataSource dataSource;
+	
 	private PreparedStatement preparedStatement = null;// 预处理sql语句
+	
 	public Connection conn = null;
+	
 	private ResultSet rs = null;
+	
+	private Logger logger = Logger.getLogger(BaseDao.class);
+	
+	private XmlHandler xmlHandler = new XmlHandler();
+	
+	public static Map<String, String> SQLMAP ;
 	
 	public void open(){
 		if (conn == null) {
@@ -35,6 +52,37 @@ public class BaseDao {
 			}
 		}
 		//return conn;
+	}
+	
+//	public BaseDao(){
+//		init();
+//	}
+	
+	
+	public void init(){
+		String filePath = BaseDao.class.getResource("/").getPath();
+		filePath = filePath + "com/pb/dao/" + "aaa.xml";
+		logger.debug(filePath);
+		try {
+			xmlHandler.loadXmlByPath(filePath);
+		} catch (JDOMException e) {
+			logger.error("xml读取错误", e);
+		} catch (IOException e) {
+			logger.error("xml文件不存在", e);
+		}
+		try {
+			List<Element> list = xmlHandler.getNodes("root/sql");
+			for (Element ele : list) {
+				String id = ele.getAttributeValue("id").trim();
+				String type = ele.getAttributeValue("type").trim();
+				String sql = ele.getText().trim();
+				logger.debug("部署在xml中的sql："+ "id = " + id + "|type = " + type + "|sql = " + sql);
+				SQLMAP.put(id, type + "-" +  sql);
+			}
+		} catch (JDOMException e) {
+			logger.error("xml节点不存在",e);
+		}
+		
 	}
 	
 	/**
@@ -122,9 +170,19 @@ public class BaseDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean update(String sql, Object[] elements) throws SQLException {
+	public boolean update(String id, Object[] elements) throws SQLException {
 		boolean vBOOL = false;
-		System.out.println(sql);
+		logger.debug("获取xml中的id："+id);
+		String allSql = SQLMAP.get(id);
+		String sqlType = getSqlType(allSql);
+		String sql = null;
+		if (!sqlType.equals("insert") && !sqlType.equals("update") && !sqlType.equals("delete")) {
+			throw new RuntimeException("sqlType出错," + sqlType + "为非法类型");
+		} else {
+			 sql = getSqlContext(allSql);
+		}
+		
+		logger.debug("数据库操作|更新SQL:"+sql+ "|占位符为:"+Arrays.toString(elements));
 		open();
 		try {
 			preparedStatement = conn.prepareStatement(sql);
@@ -157,8 +215,8 @@ public class BaseDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean insert(String sql, Object[] elements) throws SQLException {
-		return update(sql , elements);
+	public boolean insert(String id, Object[] elements) throws SQLException {
+		return update(id , elements);
 	}
 	/**
 	 * 删除语句，执行完成后没关闭连接，需要调用者在外部关闭连接
@@ -167,8 +225,8 @@ public class BaseDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	public boolean delete(String sql, Object[] elements) throws SQLException {
-		return update(sql , elements);
+	public boolean delete(String id, Object[] elements) throws SQLException {
+		return update(id , elements);
 	}
 	/**
 	 * 查询得到的结果集，并关闭连接
@@ -178,7 +236,16 @@ public class BaseDao {
 	 * @throws SQLException 
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public ArrayList queryForList(String sql, Object[] elements) throws SQLException{
+	public ArrayList queryForList(String id, Object[] elements) throws SQLException{
+		logger.debug("获取xml中的id："+id);
+		String allSql = SQLMAP.get(id);
+		String sqlType = getSqlType(allSql);
+		String sql = null;
+		if (!sqlType.equals("queryForList")) {
+			throw new RuntimeException("sqlType出错," + sqlType + "为非法类型");
+		} else {
+			 sql = getSqlContext(allSql);
+		}
 		ArrayList list = new ArrayList();
 		try {
 			open();
@@ -188,6 +255,7 @@ public class BaseDao {
 					preparedStatement.setObject(i+1, elements[i]);
 				}
 			}
+			logger.debug("数据库操作|查询SQL:"+sql + "|占位符为:"+Arrays.toString(elements) );
 			rs = preparedStatement.executeQuery();
 			while(rs.next()){
 				HashMap map = new HashMap();
@@ -276,29 +344,57 @@ public class BaseDao {
 		}
 	}
 	
-	public int queryForInt(String sql) throws SQLException{
+	public int queryForInt(String id,Object[] elements) throws SQLException{
 		open();
+		logger.debug("获取xml中的id："+id);
+		String allSql = SQLMAP.get(id);
+		String sqlType = getSqlType(allSql);
+		String sql = null;
+		if (!sqlType.equals("queryForInt")) {
+			throw new RuntimeException("sqlType出错," + sqlType + "为非法类型");
+		} else {
+			 sql = getSqlContext(allSql);
+		}
 		preparedStatement = conn.prepareStatement(sql);
+		
+		if(elements!=null){
+			for (int i = 0; i < elements.length; i++) {
+				setPreparedStatement(i + 1, elements[i]);
+			}
+		}
+		logger.debug("数据库操作|查询SQL:"+sql + "|占位符为:"+Arrays.toString(elements) );
 		rs = preparedStatement.executeQuery();
 		int num = 0;
 		while (rs.next()) {
 			num = rs.getInt(1);
 		}
+		logger.debug(SQLMAP.get("getAllUser"));
 		disconnect();
 		return num;
 	}
 	
-	public String queryForString(String sql, Object[] elements) throws SQLException{
+	public String queryForString(String id, Object[] elements) throws SQLException{
 		if (elements != null) {
 		}else{
 		}
+		logger.debug("获取xml中的id："+id);
+		String allSql = SQLMAP.get(id);
+		String sqlType = getSqlType(allSql);
+		String sql = null;
+		if (!sqlType.equals("queryForString")) {
+			throw new RuntimeException("sqlType出错," + sqlType + "为非法类型");
+		} else {
+			 sql = getSqlContext(allSql);
+		}
 		open();
+		
 		preparedStatement = conn.prepareStatement(sql);
 		if (elements != null) {
 			for (int i = 0; i < elements.length; i++) {
 				preparedStatement.setObject(i + 1, elements[i]);
 			}
 		}
+		logger.debug("数据库操作|查询SQL:"+sql + "|占位符为:"+Arrays.toString(elements) );
 		rs = preparedStatement.executeQuery();
 		String str= null;
 		while (rs.next()) {
@@ -306,6 +402,27 @@ public class BaseDao {
 		}
 		disconnect();
 		return str;
+	}
+	/**
+	 * 根据字典类型获取字典码和字典名称
+	 * @param fieldType
+	 * @return
+	 */
+	protected Map<String, String> getField(String fieldType){
+		Map<String, String> FieldMap = new HashMap<String, String>();
+		try {
+			List list = queryForList("getFieldList", new Object[]{fieldType});
+			for (Object obj : list) {
+				Map resultMap = (Map) obj;
+				String field_no = (String) resultMap.get("field_no");
+				String field_name = (String) resultMap.get("field_name");
+				FieldMap.put(field_no, field_name);
+			}
+			return FieldMap;
+		} catch (SQLException e) {
+			logger.error("-----查询数据字典失败------", e);
+		}
+		return FieldMap;
 	}
 
 	/**
@@ -321,5 +438,30 @@ public class BaseDao {
 		} catch (SQLException e) {
 		}
 		
+	}
+	/**
+	 * 解析封装过的sqlType
+	 * @param sql
+	 * @return
+	 */
+	private String getSqlType(String sql){
+		String[] array =  sql.split("-");
+		return array[0];
+	}
+	/**
+	 * 解析封装过的sqlContext
+	 * @param sql
+	 * @return
+	 */
+	private String getSqlContext(String sql){
+		String[] array =  sql.split("-");
+		return array[1];
+	}
+	public static void main(String[] args) {
+		BaseDao baseDao = new BaseDao();
+		System.out.println(baseDao.getSqlType("aaaaaaa-bbbbbb"));
+		System.out.println(baseDao.getSqlContext("aaaaaaa-bbbbbb"));
+
+
 	}
 }

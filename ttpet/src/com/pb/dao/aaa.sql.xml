@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<sql id="getAllUser" type="queryForList">select * from pet_user_tb</sql>
+<sql id="getAllGroup" type="queryForList">select * from pet_group_tb</sql>
+</root>
