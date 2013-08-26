@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<sql type="queryForList" id="getBlogTypeByUserId">select id,blog_type_name from pet_blog_type_tb where user_id = ?</sql>
+	<sql type="insert" id="addBlogType">insert into pet_blog_type_tb (blog_type_name,user_id) values (?,?)</sql>
+	<sql type="queryForList" id="getBlogByBlogTypeId">select id,title,context,auth,blog_type_id,time,tip from pet_blog_tb where blog_type_id = ? </sql>
+	<sql type="queryForList" id="getBlogByBlogId">select id,title,context,auth,blog_type_id,time,tip from pet_blog_tb where id = ? </sql>
+	<sql type="insert" id="addBlog">insert into pet_blog_tb (title,context,auth,blog_type_id,time,tip) values (?,?,?,?,?,?) </sql>
+</root>

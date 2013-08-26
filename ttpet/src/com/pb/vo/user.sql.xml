@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<sql id="getAllUser" type="queryForList">select * from pet_users_tb</sql>
+<sql id="getAllGroup" type="queryForList">select * from pet_group_tb</sql>
+<sql id="getUserNum" type="queryForInt">select count(*) from pet_user_tb where name = ? and password = ?</sql>
+
+</root>
