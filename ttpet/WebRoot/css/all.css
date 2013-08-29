@@ -72,3 +72,48 @@
 .txzl .em_text dd{ padding-left:40px;}
 .txzl .em_text dt{ background-position:-525px -158px; height:40px;}
 
+/*日志发表*/
+
+.addlog_main{
+	width: 1200px;
+	height: 900px;
+	margin-left:150px;
+}
+.addlog_title{
+	width: 1200px;
+	height: 150px;
+}
+.person_left{
+	width: 200px;
+	height: 700px;
+	background-color:#f7f7f7;
+	text-align:center;
+}
+.person_left ul {
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	
+}
+
+.person_left ul li {
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	font-size: 20px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	text-align:center;
+}
+.addlog_content{
+	/*padding-left:2cm;*/
+	width: 920px;
+	height: 700px;
+	float:right;
+	text-align:center;
+	margin-left:1cm;
+	margin-right:1cm;
+}
+
+
+
