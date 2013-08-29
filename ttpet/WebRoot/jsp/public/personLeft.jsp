@@ -17,16 +17,13 @@
 	<div>
 		<jsp:include page="../public/personHead.jsp"></jsp:include>
 	</div>
-	<div class="addlog_main">
-		
-		<div class="person_left">
-			<div>
-				<img alt="台头图片" src="../../img/touxiang.png" class="img" style="height: 150px;">
-				<a href="#">修改头像</a>
-				<p>yoyoyuan</p>
-			</div>
+	<div class="person_left">
+		<div>
+			<img alt="台头图片" src="../../img/touxiang.png" class="img" style="height: 150px;">
+			<a href="#">修改头像</a>
+			<p>yoyoyuan</p>
+		</div>
 		<ul>
-		    
 	        <li><a href="#">窝窝首页</a></li>
 	        <li><a href="#">个人资料</a></li>
 	        <li><a href="#">我的宝宝</a></li>
@@ -34,9 +31,8 @@
 			<li><a href="#">相册</a></li>
 			<li><a href="#">视频</a></li>
 		 	<li><a href="#">留言</a></li>
-		 
-		    </ul>
-		</div>
+	    </ul>
 	</div>
+	
 </body>
 </html>

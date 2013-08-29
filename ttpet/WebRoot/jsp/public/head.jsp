@@ -152,8 +152,8 @@ bady{
 					<a href="http://wowo.ttpet.com/ " class="nav_border font16 fontbold" title="窝窝">窝窝<em></em></a>
 					<div class="db_two">
 						<a href="jsp/log/publishedLogs.jsp" title="日志">日志</a>
-						<a href="http://photo.ttpet.com/" title="相册">相册</a>
-						<a href="http://video.ttpet.com/" title="视频">视频</a>
+						<a href="jsp/album/publishedAlbum.jsp" title="相册">相册</a>
+						<a href="jsp/video/publishedVideo.jsp" title="视频">视频</a>
 						<a href="http://you.ttpet.com/" title="找宠友" style="border:none;">找宠友</a>
                   </div>
 				</li>

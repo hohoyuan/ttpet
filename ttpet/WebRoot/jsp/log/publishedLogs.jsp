@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=utf8"
-    pageEncoding="utf8"%>
+<%@ page language="java" contentType="text/html; charset=gbk"
+    pageEncoding="gbk"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<!-- æ—¥å¿—å‘è¡¨é¡µé¢ -->
+<!-- ÈÕÖ¾·¢±íÒ³Ãæ -->
 <meta http-equiv="Content-Type" content="text/html; charset=gbk">
 <link rel="stylesheet" type="text/css" href="../../css/all.css" charset="UTF-8"></link>
-<title>å® ç‰©äº¤å‹-å¤©å¤©å® ç‰©ç½‘</title>
+<title>³èÎï½»ÓÑ-ÌìÌì³èÎïÍø</title>
 <style type="text/css">
 
 
@@ -19,47 +19,47 @@
 	</div>
 	<div class="addlog_main">
 		<div class="addlog_title">
-			<img alt="å°å¤´å›¾ç‰‡" src="../../img/caihong.png" class="img" style="height:100%;width:100%">
+			<img alt="Ì¨Í·Í¼Æ¬" src="../../img/caihong.png" class="img" style="height:100%;width:100%">
 		</div>
-		<div style="flaot:left;margin-left:-160px">
+		<div style="float:left;">
 			<jsp:include page="../public/personLeft.jsp"></jsp:include>
 		</div>
 		
 		<div class="addlog_content">
 			<div class="top" style="padding-top:10px;width:100%;height:50px; background-color:#f3f3f3;">
-				<div style="float:right;width:150px;font-size:20px;"><a href="#">è¿”å›žæˆ‘çš„æ—¥å¿—</a></div>
-				<div style="text-align:left;font-size:20px;width:60%;">å‘è¡¨æ—¥å¿—</div>
+				<div style="float:right;width:150px;font-size:20px;"><a href="#">·µ»ØÎÒµÄÈÕÖ¾</a></div>
+				<div style="text-align:left;font-size:20px;width:60%;">·¢±íÈÕÖ¾</div>
 			</div>
-			<div style="margin-top:10px;margin-left:60px;text-align:center;font-size:24px;width:800px;height:40px;border:1px solid #ddd;"><input type="text" value="è¯·åœ¨è¿™é‡Œè¾“å…¥æ—¥å¿—æ ‡é¢˜" name="firstname" /></div>
+			<div style="margin-top:10px;margin-left:60px;text-align:center;font-size:24px;width:800px;height:40px;border:1px solid #ddd;"><input type="text" value="ÇëÔÚÕâÀïÊäÈëÈÕÖ¾±êÌâ" name="firstname" /></div>
 			<div style="padding-top:10px;"><jsp:include page="editor.jsp"></jsp:include></div>
 			<div style="margin-top:10px;margin-left:60px;text-align:center;font-size:36px;width:800px;height:40px;border:1px solid #ddd;" >
 				<form id="pass-login">
 				<table>                
 					<tr>
-						<th>åˆ†ç±»ï¼š</th>
+						<th>·ÖÀà£º</th>
 						<td>
 							<select name="cars">
-							<option value="1">ä¸ªäººæ—¥å¿—</option>
-							<option value="2">æ—…æ¸¸</option>
+							<option value="1">¸öÈËÈÕÖ¾</option>
+							<option value="2">ÂÃÓÎ</option>
 							</select>
 						</td>
 						<th></th>
-						<td><a href='#'>æ·»åŠ åˆ†ç±»</a></td>
-						<th>æƒé™ï¼š</th>
+						<td><a href='#'>Ìí¼Ó·ÖÀà</a></td>
+						<th>È¨ÏÞ£º</th>
 						<td>
 							<select name="cars">
-							<option value="1">æ‰€æœ‰äººå¯è§</option>
-							<option value="2">ä»…å¥½å‹å¯è§</option>
-							<option value="3">å›žç­”é—®é¢˜å¯è§</option>
-							<option value="4">ä»…è‡ªå·±å¯è§</option>
+							<option value="1">ËùÓÐÈË¿É¼û</option>
+							<option value="2">½öºÃÓÑ¿É¼û</option>
+							<option value="3">»Ø´ðÎÊÌâ¿É¼û</option>
+							<option value="4">½ö×Ô¼º¿É¼û</option>
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<th></th>
-						<td><input type="button" id="login-btn" value="å‘  è¡¨" class="wlg_btn" title="å‘è¡¨" /></td>
+						<td><input type="button" id="login-btn" value="·¢  ±í" class="wlg_btn" title="·¢±í" /></td>
 						<th></th>
-						<td><input type="button" id="login-btn" value="ä¿å­˜è‰ç¨¿" class="wlg_btn" title="ä¿å­˜è‰ç¨¿" /></td>
+						<td><input type="button" id="login-btn" value="±£´æ²Ý¸å" class="wlg_btn" title="±£´æ²Ý¸å" /></td>
 					</tr>
 				</table>
 				</form>

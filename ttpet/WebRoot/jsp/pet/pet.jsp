@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<!-- 相册发表页面 -->
+<!-- 宠物页面 -->
 <meta http-equiv="Content-Type" content="text/html; charset=gbk">
 <link rel="stylesheet" type="text/css" href="../../css/all.css" charset="UTF-8"></link>
 <title>宠物交友-天天宠物网</title>
@@ -26,8 +26,8 @@
 		</div>
 		<div class="addlog_content">
 			<div class="top" style="padding-top:10px;width:100%;height:50px; background-color:#f3f3f3;">
-				<div style="float:right;width:150px;font-size:20px;"><a href="#">返回我的相册</a></div>
-				<div style="text-align:left;font-size:20px;width:60%;">上传照片  创建相册   </div>
+				<div style="float:right;width:150px;font-size:20px;"><a href="#">添加</a></div>
+				<div style="text-align:left;font-size:20px;width:60%;">我的宠物 </div>
 			</div>
 			<div style="padding-top:10px;"><jsp:include page="uploadPic.jsp"></jsp:include></div>
 			
