@@ -10,7 +10,7 @@
 .wlg_tab .set_inputa{width:260px;}
 .font26{ font-size:26px; line-height:36px!important; color:#656565; font-weight:500;}
 .wlg_con .font26{ padding-bottom:20px;}
-.wlg_btn,.wlg_btn3{ height:36px; line-height:36px; padding:0px 10px; background:#6db227; border:1px #62a123 solid; color:#fff; font-size:14px; display:inline-block; cursor:pointer; _width:160px; _border:0px;}
+.wlg_btn,.wlg_btn3{ background-image:url(../img/log_icon.png); background-repeat: repeat-x;height:32px; line-height:36px; padding:0px 10px;font-family:黑体; color:#fff; font-size:14px; display:inline-block; cursor:pointer; _width:160px; _border:0px;}
 .wlg_btn:hover,.wlg_btn{ color:#fff !important;}
 .wlg_btn:hover,wlg_btn3:hover{ text-decoration:none;}
 .wlg_tab table span{ height:60px;}
@@ -83,6 +83,26 @@
 	width: 1200px;
 	height: 150px;
 }
+
+.addlog_content{
+	/*padding-left:2cm;*/
+	width: 1000px;
+	height: 700px;
+	float:right;
+	text-align:center;
+	background-color:#fff;
+	
+}
+/*我的窝窝 日志 相册 视频 添加页面顶部条*/
+.person_top{
+	margin-top:10px;margin-left:20px;padding-top:10px;width:95%;height:40px; background-image:url(../img/log_title.png); background-repeat: repeat-x;
+}
+.person_top .top1{
+ float:right;width:150px;font-size:18px;font-weight:bold;color:#6b8a35;
+}
+.person_top .top2{padding-left:10px;text-align:left;font-size:18px;font-weight:bold;width:60%;padding-left:10px;}
+
+/*我的窝窝 左侧导航样式*/
 .person_left{
 	width: 200px;
 	height: 700px;
@@ -105,15 +125,4 @@
 	color: #FFFFFF;
 	text-align:center;
 }
-.addlog_content{
-	/*padding-left:2cm;*/
-	width: 920px;
-	height: 700px;
-	float:right;
-	text-align:center;
-	margin-left:1cm;
-	margin-right:1cm;
-}
-
-
 
