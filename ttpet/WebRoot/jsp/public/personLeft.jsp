@@ -24,12 +24,12 @@
 			<p>yoyoyuan</p>
 		</div>
 		<ul>
-	        <li><a href="#">窝窝首页</a></li>
-	        <li><a href="#">个人资料</a></li>
+	        <li><a href="wowoIndex.jsp">窝窝首页</a></li>
+	        <li><a href="../user/userInfo.jsp">个人资料</a></li>
 	        <li><a href="#">我的宝宝</a></li>
-	        <li><a href="#">日志</a></li>
-			<li><a href="#">相册</a></li>
-			<li><a href="#">视频</a></li>
+	        <li><a href="#">日志</a>    <a href="../log/publishedLogs.jsp">发表</a></li>
+			<li><a href="#">相册</a>    <a href="../album/publishedAlbum.jsp">上传</a></li>
+			<li><a href="#">视频</a>    <a href="../video/publishedVideo.jsp">添加</a></li>
 		 	<li><a href="#">留言</a></li>
 	    </ul>
 	</div>
