@@ -25,9 +25,9 @@
 			<jsp:include page="../public/personLeft.jsp"></jsp:include>
 		</div>
 		<div class="addlog_content">
-			<div class="top" style="padding-top:10px;width:100%;height:50px; background-color:#f3f3f3;">
-				<div style="float:right;width:150px;font-size:20px;"><a href="#">返回我的相册</a></div>
-				<div style="text-align:left;font-size:20px;width:60%;">上传照片  创建相册   </div>
+			<div class="person_top">
+				<div class="top1"><a href="#">返回我的相册</a></div>
+				<div class="top2">上传照片  创建相册   </div>
 			</div>
 			<div style="padding-top:10px;"><jsp:include page="uploadPic.jsp"></jsp:include></div>
 			

@@ -18,7 +18,7 @@
 
 <div style="width: 90%; margin: 0 auto">
    
-    <textarea id="editor" tabindex="1" style="width:900px;height:400px;margin:0 auto;border-color:#cccccc;">
+    <textarea id="editor" tabindex="1" style="width:800px;height:400px;margin:0 auto;border-color:#cccccc;">
         
     </textarea>
 

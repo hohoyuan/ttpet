@@ -25,11 +25,21 @@
 			<jsp:include page="../public/personLeft.jsp"></jsp:include>
 		</div>
 		<div class="addlog_content">
-			<div class="top" style="padding-top:10px;width:100%;height:50px; background-color:#f3f3f3;">
-				<div style="float:right;width:150px;font-size:20px;"><a href="#">添加</a></div>
-				<div style="text-align:left;font-size:20px;width:60%;">我的宠物 </div>
+			<div  class="person_top">
+				<div  class="top1"><a href="#">添加</a></div>
+				<div  class="top2">我的宠物 </div>
 			</div>
-			<div style="padding-top:10px;"><jsp:include page="uploadPic.jsp"></jsp:include></div>
+			<c:set var="score">85</c:set>
+			<c:choose>
+		    <c:when test="${score<90}">
+		    	<div style="padding-top:10px;"><jsp:include page="noPets.jsp"></jsp:include></div>
+		    </c:when>
+		   
+		    <c:otherwise>
+		    	<div style="padding-top:10px;"><jsp:include page="showPets.jsp"></jsp:include></div>
+		    </c:otherwise>
+		    </c:choose>
+			
 			
 		</div>
 	</div>

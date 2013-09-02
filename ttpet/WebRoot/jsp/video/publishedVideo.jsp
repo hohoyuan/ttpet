@@ -26,41 +26,43 @@
 		</div>
 		
 		<div class="addlog_content">
-			<div class="top" style="padding-top:10px;width:100%;height:50px; background-color:#f3f3f3;">
-				<div style="float:right;width:150px;font-size:20px;"><a href="#">返回我的视频</a></div>
-				<div style="text-align:left;font-size:20px;width:60%;">添加视频</div>
+			<div class="person_top">
+				<div class="top1"><a href="#">返回我的视频</a></div>
+				<div class="top2">添加视频</div>
 			</div>
-			<div style="margin-top:10px;margin-left:10px;text-align:center;font-size:24px;width:900px;height:500px;border:1px solid #ff0000;" >
+			<div style="margin-top:10px;margin-left:10px;text-align:center;font-size:24px;width:900px;height:500px;" >
 				<div class="wlg_tab bd_rh wdl" style="height:700px;">
-					<form id="pass-login">
-						<table>                
-							<tr>
-								<th>视频地址：</th>
-								<td><input type="text" name="data[uname]" value="" class="set_input"/><span style="display:none;" id="lab_notice">用户名或密码不正确</span></td>
-							</tr>
-							<tr>
-								<th></th>
-								<td>请先将视频上传到视频网站，然后在输入框里输入视频播放页面</td>
-							</tr>
-							<tr>
-								<th>视频名称：</th>
-								<td><input type="text" name="data[uname]" value="" class="set_input"/><span style="display:none;" id="lab_notice">用户名或密码不正确</span></td>
-							</tr>
-							<tr>
-								<th>视频介绍：</th>
-								<td><textarea type="text" name="data[uname]" value="" class="set_input"/><span style="display:none;" id="lab_notice">用户名或密码不正确</span></td>
-							</tr>
-							<tr>
-							
-							<td>
-								<input type="checkbox" name="data[remlogin]" id="checkbox" />
-								<a href="http://passport.ttpet.com/account/forgot" title="同意我们的协议" class="fontlv padlf110">同意我们的协议</a>
-							</td>
-							<tr>
-								<th></th>
-								<td><input type="button" id="login-btn" value="添加视频" class="wlg_btn" title="添加视频" /> <input type="button" id="login-btn" value="取消" class="wlg_btn" title="取消" /></td>
-							</tr>
-						</table>
+					<form id="form-video">
+						<div class="fb_pane clearfix">
+							<div class="fb_pane_mid clearfix">
+								<input type="hidden" name="itemId" value="" />
+								<input name="video[url]" id="video[url]" type="text"  value="" class="log_label" />
+								<p class="video_address">请先将视频上传到视频网站，然后在输入框里输入视频播放页面</p>
+							</div>
+							<label class="tit_label"><span>*</span>视频地址：</label>
+						</div>
+						<div class="fb_pane clearfix">
+							<div class="fb_pane_mid clearfix">
+								<input name="video[title]" type="text" value="" class="log_label" value="" />
+							</div>
+							<label class="tit_label"><span>*</span>视频名称：</label>
+						</div>
+						<div class="fb_pane clearfix">
+							<div class="fb_pane_mid clearfix">
+								<textarea name="video[desc]" cols="" rows="" class="log_label" style="height:60px;margin-right:5px; overflow:auto;"></textarea>
+							</div>
+							<label class="tit_label">视频介绍：</label>
+						</div>
+						
+						<div class="fb_pane clearfix">
+						<div class="fb_pane_mid"><p>
+						<input type="checkbox" value="" name="sure" checked="checked"><a href="http://www.ttpet.com/help/video_xieyi.html" target="_blank";>同意我们的协议</a></p>
+							<p class="bt_p">
+								<input type="button" value="添加视频" class="bt_post" id="video-btn"/>
+								<input type="reset" value="取&nbsp;&nbsp;消" class="bt_cancel" />
+							</p>
+						</div>
+						</div>
 					</form>
 				</div>
 				

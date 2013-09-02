@@ -13,7 +13,7 @@
 </style>
 
 </head>
-<body>
+<body style="background-image:url(../../img/bdbg.png); background-repeat: repeat-x repeat-y;">
 	<div>
 		<jsp:include page="../public/personHead.jsp"></jsp:include>
 	</div>
@@ -26,15 +26,15 @@
 		</div>
 		
 		<div class="addlog_content">
-			<div class="top" style="padding-top:10px;width:100%;height:50px; background-color:#f3f3f3;">
-				<div style="float:right;width:150px;font-size:20px;"><a href="#">返回我的日志</a></div>
-				<div style="text-align:left;font-size:20px;width:60%;">发表日志</div>
+			<div  class="person_top">
+				<div class="top1"><a href="#">返回我的日志</a></div>
+				<div class="top2">发表日志</div>
 			</div>
-			<div style="margin-top:10px;margin-left:60px;text-align:center;font-size:24px;width:800px;height:40px;border:1px solid #ddd;"><input type="text" value="请在这里输入日志标题" name="firstname" /></div>
-			<div style="padding-top:10px;"><jsp:include page="editor.jsp"></jsp:include></div>
-			<div style="margin-top:10px;margin-left:60px;text-align:center;font-size:36px;width:800px;height:40px;border:1px solid #ddd;" >
+			<div style="padding-top:10px;margin-top:10px;margin-left:40px;text-align:center;width:90%;height:40px;border:1px solid #ddd;"><input  style="font-size:24px;font-weight:bold;font-family:黑体" type="text" value="请在这里输入日志标题" name="firstname" /></div>
+			<div style="padding-top:10px;margin-left:-16px"><jsp:include page="editor.jsp"></jsp:include></div>
+			<div style="margin-top:10px;margin-left:120px;text-align:center;width:400px;height:80px;border:1px solid #ddd;" >
 				<form id="pass-login">
-				<table>                
+				<table style="font-size:18px">                
 					<tr>
 						<th>分类：</th>
 						<td>
@@ -56,6 +56,11 @@
 						</td>
 					</tr>
 					<tr>
+						<td></td>
+						<td><span></span></td>
+					</tr>
+					<tr>
+					
 						<th></th>
 						<td><input type="button" id="login-btn" value="发  表" class="wlg_btn" title="发表" /></td>
 						<th></th>
