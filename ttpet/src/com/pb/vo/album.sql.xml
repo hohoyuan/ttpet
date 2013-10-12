@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<root>
-	<sql type="insert" id="addAlbum">insert into pet_album_tb (name,introduce,tip,auth,user_id) values (?,?,?,?,?)</sql>
-	<sql type="queryForList" id="getAlbumsByUser">select id, name,introduce,tip,auth from pet_album_tb where user_id = ? </sql>
-	<sql type="insert" id="addPhoto">INSERT INTO pet_pic_tb (title,context,date,album_id) VALUES (?,?,?,?)</sql>
-	<sql type="queryForList" id="getPhotoByAlbumId">select id,title,context,date from pet_pic_tb where album_id = ? </sql>
-</root>

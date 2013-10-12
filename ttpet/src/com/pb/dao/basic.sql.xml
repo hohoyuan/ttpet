@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<root>
-	<sql type="queryForList" id="getFieldList">select field_no,field_name from pet_field_tb where field_type = ? order by field_id</sql>
-
-</root>
